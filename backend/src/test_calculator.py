@@ -91,7 +91,11 @@ class TestCalculator(unittest.TestCase):
             self.calculator.multiplication([6, 2], [3, 1])
             self.calculator.multiplication("a", "b")
 
-    ############    Вычитание    #############
+    def test_multiplication_string(self):
+        self.assertEqual(self.calculator.multiplication('1', 5), '11111')
+        self.assertEqual(self.calculator.multiplication(5, '1'), '11111')
+
+############    Вычитание    #############
 
     def test_subtract_base(self):
         self.assertEqual(self.calculator.subtraction(2, 2), 0)
